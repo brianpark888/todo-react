@@ -1,36 +1,73 @@
 .container {
   max-width: 600px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 50px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(204, 177, 177, 0.1);
 }
 
 input[type="text"].itemInput {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.formRow {
+  display: flex;
+  justify-content: start; /* Aligns items to the start of the flex container */
+  align-items: center;
 }
 
 button.addButton {
-  padding: 5px;
-  background-color: #0070f3;
+  padding: 10px;
+  background-color: #ed40ce;
   color: white;
-  border: 1px solid #0070f3;
+  border: 1px solid #ed40ce;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button.addButton:hover {
   background-color: #fff;
-  color: #0070f3;
+  color: #ed40ce;
 }
 
 .todoItem {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  border: black solid 1px;
+  border-radius: 10px;
+  padding: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todoItem:hover {
+  background-color: lightgray; /* Darker background on hover */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Shadow for 3D pop-out effect */
+  transform: scale(1.01); /* Slightly larger scale to 'pop out' */
+  z-index: 100; /* Ensure it is above other elements */
+}
+
+.todoItem input[type="checkbox"]{
+  transform: scale(1.5);
+  cursor: pointer;
+  margin-right: 1px;
+}
+
+.todoItem button{
+  background-color: #ed40ce;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.todoItem button:hover{
+  background-color: white;
+  color: #ed40ce;
+  border: #ed40ce solid 1px;
 }
 
 .todoText {
